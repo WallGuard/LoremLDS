@@ -1,22 +1,22 @@
 function bishopSteps(a, b) {
-    if ((a.length || b.length) > 2) {
+    if ((a === '') || (b === '')) {
+        console.log('пустое поле!')
+    } else if ((a.length > 2) || (b.length > 2)) {
         console.log('неверно введено поле!')
     } else if (a === b) {
         console.log('Введите разные поля!');
-    } else if ((a[1] || b[1]) == (0 || 9))  {
+    } else if (((a[1].search(/[1-8]/)) === -1) || ((b[1].search(/[1-8]/)) === -1))  {
         console.log('Неверный!');
-    }  else if ((a[0] >= 'a') && (a[0] <= 'h'))  {
+    } else if (((a[0].search(/[a-h]/)) === -1) || ((b[0].search(/[a-h]/)) === -1))  {
         console.log('Неверное поле!');
-    } else if ((b[0]) != ('a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h'))  {
-        console.log('Неверное поле!!!!');
-    } else if ((bStep(a[0]) - bStep(b[0]) === a[1] - b[1]) || ((bStep(a[0]) - bStep(b[0])) === -(a[1] - b[1]))) {
+    } else if ((blc(a[0]) - blc(b[0]) === a[1] - b[1]) || ((blc(a[0]) - blc(b[0])) === -(a[1] - b[1]))) {
         console.log('Можно ходить!');
     } else {
         console.log('Ходов нет!');
     }
 }
 
-bStep = function newNextFunction(c) {
+blc = function bishopLetterCheck(c) {
     if (c === 'a') {
         c = 1;
         return c;
@@ -44,4 +44,4 @@ bStep = function newNextFunction(c) {
     }
 }
 
-bishopSteps('a0', 'b9')
+bishopSteps('a1', 'g7')
