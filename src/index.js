@@ -1,4 +1,6 @@
 import './assets/css/bootstrap.min.css'
 import './assets/css/main.css'
-import './js/bishop'
+//import './js/bishop.js'
+import './js/maxsumm'
+//import './js/textTask3'
 //import './assets/scss/main.scss'
