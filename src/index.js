@@ -1,5 +1,5 @@
 import './assets/css/bootstrap.min.css'
-import './assets/css/main.css'
+import './assets/scss/main.scss'
 //import './js/bishop.js'
 import './js/maxsumm'
 //import './js/textTask3'
