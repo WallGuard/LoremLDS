@@ -128,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-2 row">
+        <div class="content-2">
             <div class="content-item content-item-2">
                 <div class="header-item">
                     <span class="item__line item__line-line2"><p class="item__article">ABOUT SUPER LOGO</p></span>
@@ -200,7 +200,7 @@
             <div class="header-item header-item-clients">
                 <span class="item__line item__line-line3"  style="margin-bottom: 12px"><p class="item__article">CLIENTS</p></span>
             </div>
-            <div class="clients-logo row wrap justify-content-center">
+            <div class="clients-logo">
                 <img src="assets/img/logo-html.jpg" alt="html logo" class="clients-logo__img">
                 <img src="assets/img/logo-css.jpg" alt="css logo" class="clients-logo__img">
                 <img src="assets/img/logo-nodejs.jpg" alt="nodejs logo" class="clients-logo__img">
@@ -215,7 +215,7 @@
                 </span>
             </div>
             <div class="media-files">
-                <div class="media-files-video row">
+                <div class="media-files-video">
                     <video class="media-files-video__item" src="" poster="img/logo-html.jpg" controls="controls" width="200" height="150">
                         <source src="" type="">
                     </video>
@@ -226,10 +226,16 @@
                         <source src="" type="">
                     </video>
                 </div>
-                <div class="media-files-audio row">
-                    <audio  class="media-files-audio__item" controls="controls">
+                <div class="media-files-audio">
+                    <audio  class="media-files-audio__item" id="music" preload="true">
                         <source src="" type="">
                     </audio>
+                    <div id="audioplayer">
+                        <button id="pButton" class="play"></button>
+                      <div id="timeline">    
+                      <div id="playhead"></div>
+                      </div>
+                    </div>
                     <audio   class="media-files-audio__item" controls="controls">
                         <source src="" type="">
                     </audio>

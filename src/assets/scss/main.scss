@@ -3,8 +3,8 @@
 //@import "utils/mixins";
 //@import "utils/fonts";
 //@import "utils/reset";
-
 @import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+@import url(./modules/player.scss);
 
 *, ::before, ::after {
     box-sizing: inherit;
@@ -453,7 +453,7 @@ body {
 }
 
 .header-item-clients {
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 auto;
 }
 
@@ -463,6 +463,9 @@ body {
     max-width: 934px;
 
     &-logo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 0 auto;
       align-items: center;
       max-width: 928px;
@@ -487,6 +490,8 @@ body {
     max-width: 928px;
 
     &-video {
+      display: flex;
+      flex-wrap: wrap;
       margin: 0 auto;
       max-width: 934px;
       justify-content: center;
@@ -504,6 +509,8 @@ body {
     }
     
     &-audio {
+      display: flex;
+      flex-wrap: wrap;
       margin: 0 auto;
       max-width: 934px;
       justify-content: center;
@@ -511,7 +518,9 @@ body {
       &__item {
         margin: 10px 16px;
         border: 3px solid #FFC740;
-        border-radius: 30px;
+        border-radius: 5px;
+        padding: 4px;
+        background-color: #f1f3f4;
       }
     
       &__item:hover {
@@ -724,8 +733,6 @@ body {
         width: 90%
     }
 
-    
-
     .item__line-line2 {
         width: 90%;
         max-width: 481px;
@@ -751,7 +758,7 @@ body {
 
     .bottom {
     height: 66px;
-}
+  }
 }
 
 @media (max-width: 450px) {
@@ -764,4 +771,3 @@ body {
         display: none;
     }
 }
-
