@@ -1,46 +1,39 @@
-function equalString (a, b) {
+function equalString(a, b) {
   if (checkBlock(a, b) === false) {
     console.log('false');
     return false
   } else {
-    console.log(mainFunction(a, b))
-    return mainFunction(a, b);
+    console.log(mfn(a, b))
+    return mfn(a, b)
   }
 }
 
 function checkBlock(a, b) {
-  if ((a === '') || (b === '') || (a.length !== b.length) || (a === b)) {
-      return false;
-  } else {
-      return true;
+  return !((a === '') || (b === '') || (a.length !== b.length) || (a === b))
+}
+
+const mfn = function mainFunction2(a, b) {
+  a = a.split('');
+  b = b.split('');
+  for (let i = 0, j = 0; i < a.length;) {
+      if (a.every((value, index) => value === b[index])) {
+          console.log('yes');
+          return true
+      } else if (j > a.length - 1) {
+          i++;
+          j = i;
+      } else if (a[i] === b[j]) {
+          b[i] = a[i];
+          b[j] = a[j];
+          i++;
+          j = i;
+      } else if ((j > b.length - 2) && (j === i))  {
+          console.log('No');
+          return false
+      } else {
+          j += 2;
+      }
   }
 }
 
-function mainFunction(a, b) {
-  let result = true;
-  a.split('').forEach((item, index) => {
-    let str_1 = 0;
-    let str_2 = 0;
-    let pos = -1;
-
-  while ((pos = a.indexOf(item, pos + 1)) !== -1) {
-    if (pos >= 0) {
-      str_1 += (pos & 1) + 1
-      }
-    }
-  while ((pos = b.indexOf(item, pos + 1)) !== -1) {
-    if (pos >= 0) {
-      str_2 += (pos & 1) + 1
-      }
-    }
-  if (str_1 !== str_2) {
-      result = false
-    }
-    str_1 = 0;
-    str_2 = 0;
-    });
-
-    return result;
-  }
-
-equalString('abch', 'cbad')
+equalString('abcdes', 'cdabei')

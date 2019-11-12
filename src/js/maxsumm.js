@@ -13,15 +13,15 @@ function maxSummArray(arr) {
         if ((arr[i] ^ 0) !== arr[i]){
             console.log('false');
             return false;
-        } else if (maxSumm < sum + arr[i]) {
-            maxSumm = sum + arr[i];
-            sum = sum + arr[i];
-        } else {
-            sum = sum + arr[i];
         }
+        
+        if (maxSumm < sum + arr[i]) {
+            maxSumm = sum + arr[i];
+        }
+        sum = sum + arr[i];
     }
     console.log(maxSumm);
     return maxSumm;
 }
 
-maxSummArray([5, 5, 5, 5, 5, 5, 5, 5])
+maxSummArray([5, 5, -32, 12, 4])

@@ -1,11 +1,12 @@
 function bishopSteps(a, b) {
     if (chessFieldCheck(a, b) !== true) {
-        console.log(chessFieldCheck(a, b));
+        console.log('false');
+        return false;
     } else if (((blc(a[0]) - blc(b[0])) === (a[1] - b[1])) || ((blc(a[0]) - blc(b[0])) === -(a[1] - b[1]))) {
-        console.log('Можно!');
+        console.log('true');
         return true;
     } else {
-        console.log('Нельзя!');
+        console.log('false');
         return false;
     }
 }
@@ -37,4 +38,4 @@ const blc = function chessLetterConv(c) {
     return a[c];
 }
 
-bishopSteps('', '')
+bishopSteps('h8', 'c3')
