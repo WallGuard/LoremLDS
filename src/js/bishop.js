@@ -22,7 +22,7 @@ function chessFieldCheck(a, b) {
     }
 }
 
-const blc = function chesLetterConv(c) {
+const blc = function chessLetterConv(c) {
     a = {
         'a': 1,
         'b': 2,

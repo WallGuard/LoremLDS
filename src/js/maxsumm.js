@@ -1,6 +1,6 @@
 function maxSummArray(arr) {
-    let maxSumm
-    let sum
+    let maxSumm;
+    let sum;
     if ((Number.isInteger(arr[0])) && (Number.isInteger(arr[1]))) {
         maxSumm = arr[0] + arr[1];
         sum = arr[0] + arr[1];
@@ -25,25 +25,3 @@ function maxSummArray(arr) {
 }
 
 maxSummArray([5, 5, 5, 5, 5, 5, 5, 5])
-
-///////////
-function maxSummArray2 (arr) {
-    let maxSum = 0
-    let sum = 0
-    let lastItem = null
-    arr.forEach((item) => {
-      if (lastItem && item === lastItem + 1) {
-        sum = sum > 0 ? sum + item : item + lastItem;
-        lastItem = item;
-        if (sum > maxSum) {
-          maxSum = sum;
-        }
-      } else {
-        lastItem = item;
-      }
-    });
-    console.log(maxSum);
-    return maxSum;
-  }
-
-  maxSummArray2([5, 5, 5, 5, 5, 1, 5, 5])
