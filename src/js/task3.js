@@ -36,4 +36,4 @@ const mfn = function mainFunction2(a, b) {
   }
 }
 
-equalString('abcdes', 'cdabei')
+equalString('eabcd', 'ecdab')

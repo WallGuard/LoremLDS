@@ -70,6 +70,10 @@ body {
     max-width: 980px;
     margin: 0 auto;
     margin-top: 28px;
+
+    @media (max-width: 1427px) {
+          display: none;
+    }
 }
 
 .search {
@@ -585,9 +589,9 @@ body {
 
 
 @media (max-width: 1427px) {
-    .menu-bar-false {
-        display: none;
-    }
+   // .menu-bar-false {
+   //     display: none;
+   // }
 
     .menu-bar {
         display: block;
