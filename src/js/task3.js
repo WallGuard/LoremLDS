@@ -16,7 +16,7 @@ function mainFunction2(a, b) {
   a = a.split('');
   b = b.split('');
   for (let i = 0, j = 0; i < a.length;) {
-    if (a.every((value, index) => value === b[index])) {
+    if (a.every((elem, index) => elem === b[index])) {
       return true
     } else if (j > a.length - 1) {
       i++;
