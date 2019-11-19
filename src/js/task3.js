@@ -17,18 +17,17 @@ function mainFunction2(a, b) {
   b = b.split('');
   for (let i = 0, j = 0; i < a.length;) {
     if (a.every((value, index) => value === b[index])) {
-      console.log('yes');
       return true
     } else if (j > a.length - 1) {
       i++;
       j = i;
     } else if (a[i] === b[j]) {
+      let bj = b[i];
       b[i] = a[i];
-      b[j] = a[j];
+      b[j] = bj;
       i++;
       j = i;
     } else if ((j > b.length - 2) && (j === i)) {
-      console.log('No');
       return false
     } else {
       j += 2;
