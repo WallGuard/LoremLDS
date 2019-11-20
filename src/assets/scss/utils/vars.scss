@@ -1,5 +1,5 @@
 // Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$mainFont                : 'Roboto', sans-serif;
 
 // Size
 $mainFontColor           : #101010;
@@ -10,7 +10,7 @@ $mainLineHeight          : 1.4;
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 980px;
 $tableWidth              : 768px;
-$phoneWidth              : 480px;
+$phoneWidth              : 450px;
 $smPhoneWidth            : 320px;
 
 // Main color
@@ -18,9 +18,14 @@ $default-color           : #ffffff;
 $primary-color           : #444ce0;
 $success-color           : #26de81;
 $danger-color            : #fc5c65;
-$warning-color           : #fed330;
+$orange-color            : #FFA500;
+$warning-color           : #ffc740;
+$orange-shadow           : #FFC775;
 $light-color             : #999999;
-$purple-color            : #8854d0;
+$purple-color            : #9B51E0;
+$purple_btn-color        : #6d3d99;
+$purple-bg               : #6D3DBB;
+$purple-shadow           : #6D3D77;
 
 // Neutral Color
 $neutral-primary         : #303133;
