@@ -12,27 +12,28 @@
     <div class="wrapper">
         <header class="header">
             <a class="mini-menu">☰<a>
-                    <div class="logo">
-                        <span class="logo__box"></span>
-                        <p class="logo__text">SUPER LOGO</p>
-                    </div>
-                    <nav class="menu-bar-false">
-                        <ul class="menu">
-                            <li class="menu__item menu__item_active"><a href="#"
-                                    class="menu__link menu__link_active">HOME</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">ABOUT US</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">SERVICE</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">PARTNERS</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">CUSTOMERS</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">PROJECT</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">CAREERS</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                    <form class="search">
-                        <input type="search" class="search__input"></input>
-                        <input type="submit" class="search__btn" value="GO"></input>
-                    </form>
+            <div class="logo">
+                <span class="logo__box"></span>
+                <p class="logo__text">SUPER LOGO</p>
+            </div>
+            <nav class="menu-bar-false">
+                <ul class="menu">
+                    <li class="menu__item menu__item_active">
+                        <a href="#" class="menu__link menu__link_active">HOME</a>
+                    </li>
+                    <li class="menu__item"><a href="#" class="menu__link">ABOUT US</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">SERVICE</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">PARTNERS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">CUSTOMERS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">PROJECT</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">CAREERS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">CONTACT</a></li>
+                </ul>
+            </nav>
+            <form class="search">
+                <input type="search" class="search__input"></input>
+                <input type="submit" class="search__btn" value="GO"></input>
+            </form>
         </header>
         <nav class="menu-bar">
             <ul class="menu">
@@ -54,15 +55,12 @@
                 <div class="item">
                     <img src="./assets/img/Mountains-and-hills-julian-alps.jpg" alt="Первый слайд">
                 </div>
-
                 <div class="item">
                     <img src="./assets/img/Mountains-and-hills-julian-alps copy.jpg" alt="Второй слайд">
                 </div>
-
                 <div class="item">
                     <img src="./assets/img/Mountains-and-hills-julian-alps copy 2.jpg" alt="Третий слайд">
                 </div>
-
                 <a class="prev" onclick="minusSlide()">&#10094;</a>
                 <a class="next" onclick="plusSlide()">&#10095;</a>
             </div>
@@ -80,8 +78,10 @@
 
 
 
-<!-- ПОДУМАТЬ КАК ЗАПИХНУТЬ ЭТО В ОТДЕЛЬНЫЙ ФАЙЛ JS И ПЕРЕПИСАТЬ НА ES6-->
-        <script>var slideIndex = 1;
+<!-- ПОДУМАТЬ КАК ЗАПИХНУТЬ ЭТО В ОТДЕЛЬНЫЙ ФАЙЛ JS-->
+        <script>
+
+            let slideIndex = 1;
             showSlides(slideIndex);
 
             function plusSlide() {
@@ -97,9 +97,9 @@
             }
 
             function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("item");
-                var dots = document.getElementsByClassName("slider-dots_item");
+                let slides = document.getElementsByClassName("item");
+                let dots = document.getElementsByClassName("slider-dots_item");
+                let i;
                 if (n > slides.length) {
                     slideIndex = 1
                 }
