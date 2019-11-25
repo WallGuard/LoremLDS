@@ -1,6 +1,7 @@
 //import './assets/css/bootstrap.min.css'
 import './assets/scss/main.scss'
-import './js/frame-slider.js'
+import './js/frameSlider.js'
+//import './assets/scss/modules/slider.scss'
 //import './js/bishop.js'
 //import './js/maxsumm'
 //import './js/task3'
