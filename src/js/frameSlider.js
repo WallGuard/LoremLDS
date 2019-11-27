@@ -1,3 +1,6 @@
+window.minusSlide = minusSlide
+window.plusSlide = plusSlide
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -32,3 +35,5 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+console.log('Proverka')

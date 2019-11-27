@@ -19,7 +19,7 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src,
+    //app: PATHS.src,
     module: `${PATHS.src}/index.js`,
   },
   output: {

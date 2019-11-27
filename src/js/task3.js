@@ -36,3 +36,5 @@ function mainFunction2(a, b) {
 }
 
 equalString('eabcd', 'ecdab')
+equalString('aaababac', 'aaabacac')
+equalString('abba', 'baab')

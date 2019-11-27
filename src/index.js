@@ -1,10 +1,14 @@
-//import './assets/css/bootstrap.min.css'
 import './assets/scss/main.scss'
-import './js/frameSlider.js'
-//import './assets/scss/modules/slider.scss'
+import './js/index'
+
+    //Theme_6
 //import './js/bishop.js'
 //import './js/maxsumm'
 //import './js/task3'
-//import './assets/scss/main.scss'
+
+    //HTML5 player
 //import './js/player'
 import './assets/scss/modules/player.scss'
+
+    //Theme_11 Slider
+//import './js/frameSlider.js'
