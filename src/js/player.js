@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 let music = document.getElementById('music'); 
 let duration;
 let pButton = document.getElementById('pButton');

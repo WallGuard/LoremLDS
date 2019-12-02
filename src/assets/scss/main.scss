@@ -1,8 +1,7 @@
-//@import "utils/libs";
 @import "utils/vars";
-//@import "utils/mixins";
 @import "utils/fonts";
 //@import "utils/reset";
+@import "./modules/slider.scss";
 
 @import url(./modules/player.scss);
 
@@ -168,7 +167,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../img/Mountains-and-hills-julian-alps.jpg);
+//    background-image: url(../img/Mountains-and-hills-julian-alps.jpg);
 
     &:hover {
       animation: pelena 5s;
@@ -186,6 +185,7 @@ body {
     margin-left: 3.2%;
     margin-top: 44px;
     margin-bottom: 5px;
+    z-index: 999;
 
     font-weight: normal;
     font-size: 64px;
@@ -201,6 +201,7 @@ body {
     max-width: 451px;
     margin-left: 3.2%;
     margin-top: 0;
+    z-index: 999;
 
     font-size: 14px;
     line-height: 16px;
@@ -232,6 +233,7 @@ body {
     background: $purple_btn-color;
     cursor: pointer;
     animation: slideLeft 1s 2s backwards;
+    z-index: 999;
 
     @keyframes slideLeft {
       from {

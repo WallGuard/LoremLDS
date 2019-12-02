@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function bishopSteps(a, b) {
     if (chessFieldCheck(a, b) !== true) {
         console.log('false');

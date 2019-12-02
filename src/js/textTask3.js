@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function chetNeChet(a, b) {
     if (check(a, b) !== true) {
         console.log(check(a, b));
