@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function maxSummArray(arr) {
     let maxSumm;
     let sum;
