@@ -38,8 +38,8 @@ function checkBlock(a, b) {
 //}
 
 function mainFunction3(a, b) {
-  let a = a.split('');
-  let b = b.split('');
+  a = a.split('');
+  b = b.split('');
 
   a.forEach((item, index) => {
     while(a.indexOf(item)) {
