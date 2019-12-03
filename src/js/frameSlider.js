@@ -1,11 +1,6 @@
 window.minusSlide = minusSlide;
 window.plusSlide = plusSlide;
 
-const plusSlide = plusSlide();
-const minusSlide = minusSlide();
-const currentSlide = currentSlide();
-const showSlides = showSlides();
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
