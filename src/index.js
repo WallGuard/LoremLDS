@@ -12,3 +12,4 @@ import './assets/scss/modules/player.scss';
 
     //  Theme_11 Slider
 //  import './js/frameSlider.js'
+import './js/slider2.js'

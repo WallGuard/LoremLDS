@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sed -i  's/.*gold_cost*/gold_cost = 5000 #"/' 00_buildings
-sed -i  's/.*build_time*/gold_cost = 5000 #"/' 00_buildings

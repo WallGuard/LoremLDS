@@ -31,19 +31,19 @@ const color = function changeColorOfSomeHeadings(elements, newColor) {
   
     const request = urlT =>
       new Promise((resolve, reject) => {
-        const req = new XMLHttpRequest();
-        req.open('GET', urlT);
-        req.onload = () => {
-          if (req.status === 200) {
-            resolve(req);
+        const xHR = new XMLHttpRequest();
+        xHR.open('GET', urlT);
+        xHR.onload = () => {
+          if (xHR.status === 200) {
+            resolve(xHR);
           } else {
-            reject(req.statusText);
+            reject(xHR.statusText);
           }
         };
-        req.onerror = () => reject(request.statusText);
-        req.send();
+        xHR.onerror = () => reject(request.statusText);
+        xHR.send();
       });
-  
+      
     async function insertText(url) {
       try {
         const response = await request(url);

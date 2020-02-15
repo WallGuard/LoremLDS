@@ -33,5 +33,7 @@ class Slider {
 }
 
 let slider = new Slider(1)
+
 slider.showSlides(1)
+
 window.slider = slider
