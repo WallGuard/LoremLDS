@@ -1,6 +1,7 @@
 class Slider {
     constructor(slideIndex){
     this.slideIndex = slideIndex;
+    this.showSlides()
     }
 
     plusSlide() {
@@ -33,5 +34,5 @@ class Slider {
 }
 
 let slider = new Slider(1)
-slider.showSlides(1)
+
 window.slider = slider

@@ -164,9 +164,9 @@ body {
     min-height: 400px;
     width: 100%;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+//    background-size: cover;
+//    background-position: center;
+//    background-repeat: no-repeat;
 //    background-image: url(../img/Mountains-and-hills-julian-alps.jpg);
 
     &:hover {
@@ -606,10 +606,13 @@ body {
 
 @media (max-width: 1430px) {
 
+  .wrapper {
+    max-width: 980px;
+  }
+
     .header {
     position: relative;
     width: 100%;
-    max-width: 980px;
     margin: 0 auto;
     padding-bottom: 0px;
     }
@@ -634,7 +637,7 @@ body {
 
 @media (max-width: 1200px) {
     .wrapper {
-        max-width: 980px;
+      max-width: 980px;
     }
 
     .item__text {
