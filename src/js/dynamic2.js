@@ -24,22 +24,19 @@ function httpGet(url) {
   }));
 }
 
-function cardDecorating() {
-  const cardList = document.querySelectorAll('.content');
-  [...cardList].forEach((cardName, index) => {
-    cardName.className = (index % 4 === 0 || index % 4 === 3) ? 'block-name item_purple' : 'block-name item_yellow';
-  });
+function colorize(index) {
+  //if (index === 1) {return 'item__line-line-2'}
+  if (index % 2 !== 0) { return 'item__line-line-2' }
 }
 
-function createCard(textArr) {
-  JSON.parse(textArr).forEach(async (text) => {
+function createItem(textArr) {
+  JSON.parse(textArr).forEach(async (text, index) => {
     const res = await httpGet(imageURL);
-    const item = 
     $(
       `<div class="content-item">
         <div class="header-item">
-          <span class="item__line">
-            <p class="item__article">text</p>
+          <span class="item__line ${colorize(index)}">
+            <p class="item__article">SUPER LOGO</p>
           </span>
         </div>
         <div class="item-block">
@@ -52,14 +49,12 @@ function createCard(textArr) {
         </div>
       </div>`
     ).appendTo(".content")
-    console.log(res);
-    //cardDecorating();
   });
 }
 
 async function getDataText(url) {
   const res = await httpGet(url);
-  createCard(res.data);
+  createItem(res.data);
 }
 
 getDataText(textURL);
