@@ -7,28 +7,47 @@ let playhead = document.getElementById('playhead');
 let timeline = document.getElementById('timeline');
 let timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
 
-music.addEventListener("timeupdate", timeUpdate, false);
+class Player {
+	constructor(
+		music,
+		duration,
+		pButton,
+		pButton,
+		playhead,
+		timeline,
+		timelineWidth,
+		onplayhead = false
+		){
+		this.music = music;
+		this.duration = duration;
+		this.pButton = pButton;
+		this.playhead = playhead;
+		this.timeline = timeline;
+		this.timelineWidth = timelineWidth;
+		this.onplayhead = onplayhead;
+	}
 
-timeline.addEventListener("click", function (event) {
+music = this.music.addEventListener("timeupdate", timeUpdate, false);
+
+timeline = this.timeline.addEventListener("click", function (event) {
 	moveplayhead(event);
 	music.currentTime = duration * clickPercent(event);
 }, false);
 
-function clickPercent(e) {	return (e.pageX - timeline.offsetLeft) / timelineWidth;
+clickPercent(e) {	return (e.pageX - timeline.offsetLeft) / timelineWidth;
 }
  
-playhead.addEventListener('mousedown', mouseDown, false);
-window.addEventListener('mouseup', mouseUp, false);
+playhead = this.playhead.addEventListener('mousedown', mouseDown, false);
+window = window.addEventListener('mouseup', mouseUp, false);
  
-let onplayhead = false;
-function mouseDown() {
-	onplayhead = true;
+mouseDown() {
+	this.onplayhead = true;
 	window.addEventListener('mousemove', moveplayhead, true);
 	music.removeEventListener('timeupdate', timeUpdate, false);
 }
 
-function mouseUp(e) {
-	if (onplayhead == true) {
+mouseUp(e) {
+	if (this.onplayhead == true) {
 		moveplayhead(e);
 		window.removeEventListener('mousemove', moveplayhead, true);
 		music.currentTime = duration * clickPercent(e);
@@ -37,7 +56,7 @@ function mouseUp(e) {
 	onplayhead = false;
 }
 
-function moveplayhead(e) {
+moveplayhead(e) {
 	let newMargLeft = e.pageX - timeline.offsetLeft;
 	if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
 		playhead.style.marginLeft = newMargLeft + "px";
@@ -50,7 +69,7 @@ function moveplayhead(e) {
 	}
 }
  
-function timeUpdate() {
+timeUpdate = () => {
 	let playPercent = timelineWidth * (music.currentTime / duration);
 	playhead.style.marginLeft = playPercent + "px";
 	if (music.currentTime == duration) {
@@ -59,7 +78,7 @@ function timeUpdate() {
 	}
 }
 
-function play() {
+play = () => {
 	if (music.paused) {
 		music.play();
 		pButton.className = "";
@@ -71,6 +90,12 @@ function play() {
 	}
 }
 
-music.addEventListener("canplaythrough", function () {
+music = this.music.addEventListener("canplaythrough", function () {
 	duration = music.duration;  
 }, false);
+
+}
+
+player = new Player()
+
+window.player = player;
